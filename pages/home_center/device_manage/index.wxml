@@ -12,7 +12,7 @@
     <van-icon size="20" name="arrow" />
   </view>
 
-  <view class="device-block" style="justify-content: center">
+  <view class="device-block" style="justify-content: center" bindtap="remove">
     <text class="device-remove">移除设备</text>
   </view>
 </view>

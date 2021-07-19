@@ -109,3 +109,13 @@ export const reqTicket = () =>
       params: {}
     }
   });
+
+// 移除设备
+export const deleteDevice = (devId) => 
+  request({
+    name: 'ty-service',
+    data: {
+      action: 'device.remove',
+      params: { device_id: devId}
+    }
+  });

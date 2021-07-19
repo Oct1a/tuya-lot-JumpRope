@@ -10,16 +10,8 @@ Page({
     apUrl: '/pages/web_view/index?urlType=apUrl',
     list: [
       {
-        name: 'Wi-Fi AP 配网',
-        baseUrl: 'plugin://tuya-ap-plugin/step1'
-      },
-      {
-        name: '蓝牙配网',
-        baseUrl: 'plugin://tuya-ap-plugin/ble'
-      },
-      {
-        name: '扫码配网',
-        baseUrl: 'plugin://tuya-ap-plugin/virtual'
+        name: '自动发现',
+        baseUrl: 'plugin://tuya-ap-plugin/auto'
       }
     ]
   },
@@ -38,12 +30,14 @@ Page({
 
   },
 
+  // 跳转配网插件
   gotoPluginpage: async function ({ currentTarget }) {
     const { dataset: { baseurl } } = currentTarget
     const [{ ticket }, clientId] = await Promise.all([reqTicket(), getClientId()])
 
+    const home_id = wx.getStorageSync('owner_id')
     wx.navigateTo({
-      url: `${baseurl}?ticket=${ticket}&clientId=${clientId}`,
+      url: `${baseurl}?ticket=${ticket}&clientId=${clientId}&gid=${home_id}`,
     })
   },
 

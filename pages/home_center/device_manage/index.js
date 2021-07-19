@@ -1,4 +1,5 @@
 // miniprogram/pages/home_center/device_manage/index.js.js
+import { deleteDevice } from '../../../utils/api/device-api'
 
 
 Page({
@@ -7,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    dialogShow: false
+    dialogShow: false,
+    device_id: ''
   },
 
   /**
@@ -16,6 +18,8 @@ Page({
   onLoad: function (options) {
     const { device_icon, device_name, device_id } = options
     this.setData({ device_icon: `https://images.tuyacn.com/${device_icon}`, device_name, device_id })
+    this.setData({  device_id })
+    console.log(device_id)
   },
 
   /**
@@ -27,5 +31,11 @@ Page({
 
   showDeviceInfo: function() {
     this.setData({ dialogShow: true })
+  },
+
+  remove: function() {
+    const { device_id } = this.data
+    deleteDevice(device_id)
   }
+
 })

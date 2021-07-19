@@ -6,7 +6,7 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "enhance": false,
+    "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
@@ -44,9 +44,9 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.12.0",
+  "libVersion": "2.16.1",
   "appid": "wx1d3e643788adbaa9",
-  "projectname": "tuya",
+  "projectname": "TY_RopeSkipping",
   "debugOptions": {
     "hidedInDevtools": []
   },

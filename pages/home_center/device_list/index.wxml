@@ -12,6 +12,12 @@
               <view class="base-name">{{device.name}}</view>
             </view>
           </block>
+          <view class="base-item {{(deviceList.length+1)%2 !== 0 && 'base-item-left'}}" bindtap="jumpToAdd" >
+              <view class="base-icon">
+                <image class="base-icon-images" src="/image/addDevicebtn@2x.png"/>
+              </view>
+              <view class="base-name-add">添加设备</view>
+          </view>
         </view>
       </scroll-view>
     </van-tab>

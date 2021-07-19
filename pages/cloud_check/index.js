@@ -28,7 +28,7 @@ Page({
   checkCloud: async function () {
     try {
       const { miniProgram } = wx.getAccountInfoSync()
-      wx.cloud.init({ env: `ty-${miniProgram.appId}` })
+      wx.cloud.init({ env: `ty-${miniProgram.appId}` });
       this.setData({ percentage: 25 })
     } catch (error) {
       console.log(error)
