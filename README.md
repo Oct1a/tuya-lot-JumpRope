@@ -42,6 +42,8 @@
   目前支持设备控制，消息推送，添加设备(配网), 家庭模块
 
 ## 视频演示
+哔哩哔哩视频：https://www.bilibili.com/video/BV1vL411H7Ph
+
 <video id="video" controls="" preload="none" poster="封面">
       <source id="mp4" src="https://www.bilibili.com/video/BV1vL411H7Ph?share_source=copy_web" type="video/mp4">
 </videos>
